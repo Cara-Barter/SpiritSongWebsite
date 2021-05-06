@@ -1,0 +1,182 @@
+/* banner formatting */
+.banner {
+  max-width: 100%;
+  margin: 0px;
+  height: 200px;
+  background-image: url(photos/booth_yarn.jpg);
+  background-size: cover;
+  background-position: 50% 70%;
+}
+
+
+/* navbar formatting */
+.navbar {
+  overflow: hidden;
+  background-color: teal;
+  /* position: fixed;
+  top: 0; */
+  width: 100%;
+  font-size: 18px;
+  color: white;
+  /* font-family: 'Roboto Condensed', sans-serif; */
+  text-decoration: none;
+}
+
+.navbar a:hover{
+  background-color: slateblue;
+}
+
+.navbar a {
+  float: left;
+  font-size: 18px;
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 18px;
+  padding: 20px;
+  background-color: inherit;
+  border: none;
+  outline: none;
+  color: inherit;
+  font-family: inherit;
+  /* text-decoration: none; */
+}
+
+.dropdown button:hover {
+  background-color: slateblue;
+  /* display: block; */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160 px;
+  background-color: darkviolet;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text align: left;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* body formatting */
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: lightgrey;
+  color: black;
+  font-size: 20px;
+}
+
+h1 {
+  padding: 15px;
+  margin: 15px;
+  border-bottom: 2px solid black;
+}
+
+img {
+  margin: 25px;
+  max-width: 300px;
+}
+
+.img-w-text {
+  /* text-align: justify; */
+  max-width: 300px;
+  font-size: 16px;
+  /* text-decoration: italic; */
+  border: 2px solid darkgrey;
+}
+
+.img-w-text img {
+  display: block;
+  margin: 0 auto;
+}
+
+.img-w-text p {
+  /* border: 2px solid teal; */
+  /* box-style: border-box; */
+}
+
+p {
+  margin: 25px;
+}
+
+a:visited {
+  color: navy;
+}
+
+footer {
+  text-align: right;
+}
+
+/* contact page formatting */
+#contact {
+  display: flex;
+}
+
+.social {
+  max-width: 50%;
+}
+
+.social img {
+  max-width: 60%;
+}
+
+.social img:hover {
+  opacity: 60%;
+}
+
+/* story page formatting */
+
+.story {
+  display: flex;
+  /* flex-wrap: wrap;
+  align-content: center;
+  align-self: right; */
+}
+
+.storyitem1 {
+  margin: 10px;
+}
+
+.storyitem2 {
+  margin: 10px;
+}
+
+/* .story img {
+  width: 100%;
+  height: auto;
+} */
+
+/* li {
+  display: ;
+} */
+
+/* home page formatting */
+.home {
+  display: flex;
+  margin: 20px;
+}
+
+.home1 {
+  margin: 10px
+}
+
+.home2 {
+  margin: 10px;
+}
