@@ -202,6 +202,7 @@ footer {
   border: 2px solid black;
   margin: 30px;
   padding: 20px;
+  background-color: darkseagreen;
 }
 
 .question {
@@ -222,8 +223,10 @@ footer {
   padding: 20px;
   cursor: pointer;
   margin-bottom: 20px;
+  margin: auto;
+
 }
 
 #submit:hover {
-  background-color: bisque;
+  background-color: darkslateblue;
 }
