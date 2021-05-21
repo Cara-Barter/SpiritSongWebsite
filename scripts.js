@@ -1,38 +1,17 @@
 // object arrays
-var yarn = [
-  {
-    weight: "fingering",
-    photo:
-    price:
-    description:
-  },
-  {
-
-  }
-]
+// var yarn = [
+//   {
+//     weight: "fingering",
+//     photo:
+//     price:
+//     description:
+//   },
+//   {
+//
+//   }
+// ]
 
 // yarn quiz created using the tutorial on https://simplestepscode.com/javascript-quiz-tutorial/
-
-var myQuestions = [
-  {
-    question: "What is 10/2?",
-    answers: {
-      a: '3',
-      b: '5',
-      c: '115'
-    },
-    correctAnswer: 'b'
-  },
-  {
-    question: "What is 30/3?",
-    answers: {
-      a: '3',
-      b: '5',
-      c: '10'
-    },
-    correctAnswer: 'c'
-  }
-];
 
 function generateQuiz (questions, quizContainer, resultsContainer, submitButton) {
 
@@ -48,7 +27,7 @@ function generateQuiz (questions, quizContainer, resultsContainer, submitButton)
       answers = [];
 
       // for each available answer to this question...
-      for(letter in questions[i].answers){
+      for(var letter in questions[i].answers){
 
         // add an HTML radio button
         answers.push(
@@ -109,31 +88,41 @@ function generateQuiz (questions, quizContainer, resultsContainer, submitButton)
   // when user clicks submit, show results
   submitButton.onclick = function(){
     showResults(questions, quizContainer, resultsContainer);
-  }
+  };
 }
 
-// var myQuestions = [
-//   {
-//     question: "What is 10/2?",
-//     answers: {
-//       a: '3',
-//       b: '5',
-//       c: '115'
-//     },
-//     correctAnswer: 'b'
-//   },
-//   {
-//     question: "What is 30/3?",
-//     answers: {
-//       a: '3',
-//       b: '5',
-//       c: '10'
-//     },
-//     correctAnswer: 'c'
-//   }
-// ];
+var myQuestions = [
+  {
+    question: "1. What makes wool ordour resistant?",
+    answers: {
+      a: 'It creates an impenetrable layer that traps odours',
+      b: 'It absorbs moisture vapour and odour molecules releasing them upon washing',
+      c: 'It has no nose!'
+    },
+    correctAnswer: 'b'
+  }, 
+  {
+    question: "2. True or false, wool can hold up to 30% of its weight in water before it feels wet?",
+    answers: {
+      a: 'True',
+      b: 'False'
+    },
+    correctAnswer: 'a'
+  },
+  {
+    question: "3. What makes wool wrinkle resistant?",
+    answers: {
+      a: 'It has no stretch at all allowing the fibres to be locked in place.',
+      b: 'It never gets old!',
+      c: 'At a microscopic level, the fibres are like coiled springs that return to their natural shape after being bent.'
+    },
+    correctAnswer: 'c'
+  }
+];
 
 // display to html
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
+
+generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
