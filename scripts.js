@@ -33,8 +33,8 @@ function generateQuiz (questions, quizContainer, resultsContainer, submitButton)
         answers.push(
           '<label>'
             + '<input type="radio" name="question'+i+'" value="'+letter+'">'
-            + letter + ':'
-            + questions[i].answers[letter]
+            + letter + ':' + ' '
+            + questions[i].answers[letter] + '<br>'
           + '<label>'
         );
       }
@@ -42,7 +42,7 @@ function generateQuiz (questions, quizContainer, resultsContainer, submitButton)
       // add this question and its answers to the output
       output.push(
         '<div class="question">' + questions[i].question + '</div>'
-        + '<div class="answers">' +answers.join('') + '</div' + '<br>'
+        + '<div class="answers">' + answers.join('') + '</div>' + '<br>'
       );
     }
   // finally combine out output list into one string of html and put it on the page
@@ -51,8 +51,10 @@ function generateQuiz (questions, quizContainer, resultsContainer, submitButton)
 
   function showResults (questions, quizContainer, resultsContainer) {
 
+    console.log(quizContainer)
     // gather answer containers from our quiz
-    var answerContainers = quizContainer.querySelectorAll('answers');
+    var answerContainers = quizContainer.querySelectorAll(answers);
+    console.log(answerContainers)
 
     // keep track or user's answers
     var userAnswer = '';
@@ -60,13 +62,13 @@ function generateQuiz (questions, quizContainer, resultsContainer, submitButton)
 
     // for each question...
     for(var i=0; i<questions.length; i++){
-console.log (answerContainers)
+
       // find selected answer
-      userAnswer = (answerContainers[i].querySelector('input[name="question'+i+'"]:checked')||{}).value;
+      userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value
 
       // if answer is correct
       if(userAnswer===questions[i].correctAnswer){
-        // add tot he number of correct answers
+        // add to the number of correct answers
         numCorrect++;
 
         // colour the answers green
