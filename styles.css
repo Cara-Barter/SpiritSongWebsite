@@ -85,9 +85,14 @@ body {
 }
 
 h1 {
-  padding: 15px;
-  margin: 15px;
+  padding: 20px;
+  margin: 20px;
   border-bottom: 2px solid black;
+}
+
+h2 h3 {
+  padding: 20px;
+  margin: 50px;
 }
 
 img {
@@ -187,4 +192,38 @@ footer {
 .home2 {
   margin: 10px;
   max-width: 1000px;
+}
+
+/* Quiz formatting */
+.quizbox {
+  display: flex;
+  justify-content: column;
+  flex-wrap: wrap;
+  border: 2px solid black;
+  margin: 30px;
+  padding: 20px;
+}
+
+.question {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.answers {
+  margin-bottom: 20px;
+}
+
+#submit {
+  font-size: 20px;
+  background-color: blueviolet;
+  color: white;
+  border: 0px;
+  border-radius: 3px;
+  padding: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+#submit:hover {
+  background-color: bisque;
 }
