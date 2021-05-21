@@ -42,7 +42,7 @@ function generateQuiz (questions, quizContainer, resultsContainer, submitButton)
       // add this question and its answers to the output
       output.push(
         '<div class="question">' + questions[i].question + '</div>'
-        + '<div class="answers">' +answers.join('') + '</div'
+        + '<div class="answers">' +answers.join('') + '</div' + '<br>'
       );
     }
   // finally combine out output list into one string of html and put it on the page
@@ -51,7 +51,7 @@ function generateQuiz (questions, quizContainer, resultsContainer, submitButton)
 
   function showResults (questions, quizContainer, resultsContainer) {
 
-    // gather answer containers from out quiz
+    // gather answer containers from our quiz
     var answerContainers = quizContainer.querySelectorAll('answers');
 
     // keep track or user's answers
@@ -60,9 +60,9 @@ function generateQuiz (questions, quizContainer, resultsContainer, submitButton)
 
     // for each question...
     for(var i=0; i<questions.length; i++){
-
+console.log (answerContainers)
       // find selected answer
-      userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+      userAnswer = (answerContainers[i].querySelector('input[name="question'+i+'"]:checked')||{}).value;
 
       // if answer is correct
       if(userAnswer===questions[i].correctAnswer){
@@ -100,7 +100,8 @@ var myQuestions = [
       c: 'It has no nose!'
     },
     correctAnswer: 'b'
-  }, 
+  },
+
   {
     question: "2. True or false, wool can hold up to 30% of its weight in water before it feels wet?",
     answers: {
@@ -109,6 +110,7 @@ var myQuestions = [
     },
     correctAnswer: 'a'
   },
+
   {
     question: "3. What makes wool wrinkle resistant?",
     answers: {
